@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = 'x0a8*%s_*7m#jiu_97l2q&pcyae*)^6sdbsk(n8dmdm52i2+3#'
 
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 #       'HOST': 'localhost',
 #       'PORT': '5432',
 #   }
-#}
+#	}
 
 
 
