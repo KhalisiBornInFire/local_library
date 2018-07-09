@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block title %} <title>All borrowed books</title> {% endblock %}
+
+{% block content %}
+    <h1>All borrowed books from our library</h1>
+
+    <ul></ul>
+    {% for book in books %}
+        <li><p><a href="{% url 'book-detail' book.book.pk %}">{{book.book.title}}</a> - {{book.borrower}}, <strong>due_back</strong>: <em>{{book.due_back}}</em> <a href="{% url 'renew-book-librarian' book.pk %}">Renew</a></p></li>
+
+    {% endfor %}
+{% endblock %}
