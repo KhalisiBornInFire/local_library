@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import dj_database_url
+from decouple import config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -86,16 +87,16 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db',
-        'USER': 'idlesolution',
-        'PASSWORD': 'cbdum123',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+#DATABASES = {
+ #   'default': {
+ #       'ENGINE': 'django.db.backends.postgresql',
+ #       'NAME': 'db',
+ #       'USER': 'idlesolution',
+ #       'PASSWORD': 'cbdum123',
+ #       'HOST': 'localhost',
+ #       'PORT': '5432',
+ #   }
+#}
 
 
 
